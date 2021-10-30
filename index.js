@@ -3,7 +3,9 @@ let app = express();
 let server = require('http').createServer(app);
 let io = require('socket.io')(server);
 
-server.listen(8000);
+let PORT = process.env.PORT || 80;
+
+server.listen(PORT);
 users = [];
 connections = [];
 
